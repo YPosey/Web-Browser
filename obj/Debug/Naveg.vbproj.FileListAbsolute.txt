@@ -1,0 +1,13 @@
+C:\Users\ygora\source\repos\Naveg\Naveg\bin\Debug\Naveg.exe.config
+C:\Users\ygora\source\repos\Naveg\Naveg\bin\Debug\Naveg.exe
+C:\Users\ygora\source\repos\Naveg\Naveg\bin\Debug\Naveg.pdb
+C:\Users\ygora\source\repos\Naveg\Naveg\bin\Debug\Naveg.xml
+C:\Users\ygora\source\repos\Naveg\Naveg\obj\Debug\Naveg.vbprojAssemblyReference.cache
+C:\Users\ygora\source\repos\Naveg\Naveg\obj\Debug\Naveg.Form1.resources
+C:\Users\ygora\source\repos\Naveg\Naveg\obj\Debug\Naveg.Resources.resources
+C:\Users\ygora\source\repos\Naveg\Naveg\obj\Debug\Naveg.vbproj.GenerateResource.cache
+C:\Users\ygora\source\repos\Naveg\Naveg\obj\Debug\Naveg.vbproj.CoreCompileInputs.cache
+C:\Users\ygora\source\repos\Naveg\Naveg\obj\Debug\Naveg.exe
+C:\Users\ygora\source\repos\Naveg\Naveg\obj\Debug\Naveg.xml
+C:\Users\ygora\source\repos\Naveg\Naveg\obj\Debug\Naveg.pdb
+C:\Users\ygora\source\repos\Naveg\Naveg\obj\Debug\Naveg.Opcoes.resources
