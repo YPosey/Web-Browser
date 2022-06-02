@@ -27,6 +27,7 @@ Partial Class Form1
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.ArquivoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NovoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CloseTabToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SalvarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AbrirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
@@ -41,16 +42,15 @@ Partial Class Form1
         Me.toolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         Me.SelecionarTudoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FerramentasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PersonalizarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpçõesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BookmarksToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HistoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AjudaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConteúdoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ÍndiceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PesquisarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.toolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
         Me.SobreToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DownloadToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.BookmarksToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.txtUrlSearchEngine = New System.Windows.Forms.ToolStrip()
         Me.BackBtn = New System.Windows.Forms.ToolStripButton()
         Me.ForwardBtn = New System.Windows.Forms.ToolStripButton()
@@ -60,34 +60,34 @@ Partial Class Form1
         Me.cmbSearchEngines = New System.Windows.Forms.ToolStripComboBox()
         Me.txtUrlSearchEngines = New System.Windows.Forms.ToolStripTextBox()
         Me.DownloadBtn = New System.Windows.Forms.ToolStripButton()
+        Me.lbl = New System.Windows.Forms.ToolStripLabel()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
-        Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.WebBrowser1 = New System.Windows.Forms.WebBrowser()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.AddToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BookmarksToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.txtUrlSearchEngine.SuspendLayout()
-        Me.TabControl1.SuspendLayout()
-        Me.TabPage1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
         Me.MenuStrip1.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ArquivoToolStripMenuItem, Me.EditarToolStripMenuItem, Me.FerramentasToolStripMenuItem, Me.BookmarksToolStripMenuItem, Me.DownloadToolStripMenuItem, Me.AjudaToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ArquivoToolStripMenuItem, Me.EditarToolStripMenuItem, Me.FerramentasToolStripMenuItem, Me.BookmarksToolStripMenuItem, Me.HistoryToolStripMenuItem, Me.AjudaToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
-        Me.MenuStrip1.Size = New System.Drawing.Size(1261, 28)
+        Me.MenuStrip1.Size = New System.Drawing.Size(835, 28)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
         'ArquivoToolStripMenuItem
         '
-        Me.ArquivoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NovoToolStripMenuItem, Me.SalvarToolStripMenuItem, Me.AbrirToolStripMenuItem, Me.ToolStripMenuItem1, Me.SairToolStripMenuItem})
+        Me.ArquivoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NovoToolStripMenuItem, Me.CloseTabToolStripMenuItem, Me.SalvarToolStripMenuItem, Me.AbrirToolStripMenuItem, Me.ToolStripMenuItem1, Me.SairToolStripMenuItem})
         Me.ArquivoToolStripMenuItem.Name = "ArquivoToolStripMenuItem"
         Me.ArquivoToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.P), System.Windows.Forms.Keys)
-        Me.ArquivoToolStripMenuItem.Size = New System.Drawing.Size(46, 24)
+        Me.ArquivoToolStripMenuItem.Size = New System.Drawing.Size(46, 26)
         Me.ArquivoToolStripMenuItem.Text = "&File"
         '
         'NovoToolStripMenuItem
@@ -98,6 +98,12 @@ Partial Class Form1
         Me.NovoToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.T), System.Windows.Forms.Keys)
         Me.NovoToolStripMenuItem.Size = New System.Drawing.Size(320, 26)
         Me.NovoToolStripMenuItem.Text = "New Tab"
+        '
+        'CloseTabToolStripMenuItem
+        '
+        Me.CloseTabToolStripMenuItem.Name = "CloseTabToolStripMenuItem"
+        Me.CloseTabToolStripMenuItem.Size = New System.Drawing.Size(320, 26)
+        Me.CloseTabToolStripMenuItem.Text = "Close Tab"
         '
         'SalvarToolStripMenuItem
         '
@@ -135,27 +141,27 @@ Partial Class Form1
         '
         Me.EditarToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DesfazerToolStripMenuItem, Me.RefazerToolStripMenuItem, Me.toolStripSeparator3, Me.RecortarToolStripMenuItem, Me.CopiarToolStripMenuItem, Me.ColarToolStripMenuItem, Me.toolStripSeparator4, Me.SelecionarTudoToolStripMenuItem})
         Me.EditarToolStripMenuItem.Name = "EditarToolStripMenuItem"
-        Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(49, 24)
+        Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(49, 26)
         Me.EditarToolStripMenuItem.Text = "&Edit"
         '
         'DesfazerToolStripMenuItem
         '
         Me.DesfazerToolStripMenuItem.Name = "DesfazerToolStripMenuItem"
         Me.DesfazerToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Z), System.Windows.Forms.Keys)
-        Me.DesfazerToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.DesfazerToolStripMenuItem.Size = New System.Drawing.Size(201, 26)
         Me.DesfazerToolStripMenuItem.Text = "&Desfazer"
         '
         'RefazerToolStripMenuItem
         '
         Me.RefazerToolStripMenuItem.Name = "RefazerToolStripMenuItem"
         Me.RefazerToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Y), System.Windows.Forms.Keys)
-        Me.RefazerToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.RefazerToolStripMenuItem.Size = New System.Drawing.Size(201, 26)
         Me.RefazerToolStripMenuItem.Text = "&Refazer"
         '
         'toolStripSeparator3
         '
         Me.toolStripSeparator3.Name = "toolStripSeparator3"
-        Me.toolStripSeparator3.Size = New System.Drawing.Size(221, 6)
+        Me.toolStripSeparator3.Size = New System.Drawing.Size(198, 6)
         '
         'RecortarToolStripMenuItem
         '
@@ -163,7 +169,7 @@ Partial Class Form1
         Me.RecortarToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.RecortarToolStripMenuItem.Name = "RecortarToolStripMenuItem"
         Me.RecortarToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.X), System.Windows.Forms.Keys)
-        Me.RecortarToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.RecortarToolStripMenuItem.Size = New System.Drawing.Size(201, 26)
         Me.RecortarToolStripMenuItem.Text = "Recor&tar"
         '
         'CopiarToolStripMenuItem
@@ -172,7 +178,7 @@ Partial Class Form1
         Me.CopiarToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.CopiarToolStripMenuItem.Name = "CopiarToolStripMenuItem"
         Me.CopiarToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.C), System.Windows.Forms.Keys)
-        Me.CopiarToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.CopiarToolStripMenuItem.Size = New System.Drawing.Size(201, 26)
         Me.CopiarToolStripMenuItem.Text = "&Copiar"
         '
         'ColarToolStripMenuItem
@@ -181,95 +187,90 @@ Partial Class Form1
         Me.ColarToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ColarToolStripMenuItem.Name = "ColarToolStripMenuItem"
         Me.ColarToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.V), System.Windows.Forms.Keys)
-        Me.ColarToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.ColarToolStripMenuItem.Size = New System.Drawing.Size(201, 26)
         Me.ColarToolStripMenuItem.Text = "C&olar"
         '
         'toolStripSeparator4
         '
         Me.toolStripSeparator4.Name = "toolStripSeparator4"
-        Me.toolStripSeparator4.Size = New System.Drawing.Size(221, 6)
+        Me.toolStripSeparator4.Size = New System.Drawing.Size(198, 6)
         '
         'SelecionarTudoToolStripMenuItem
         '
         Me.SelecionarTudoToolStripMenuItem.Name = "SelecionarTudoToolStripMenuItem"
-        Me.SelecionarTudoToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.SelecionarTudoToolStripMenuItem.Size = New System.Drawing.Size(201, 26)
         Me.SelecionarTudoToolStripMenuItem.Text = "Selecionar &Tudo"
         '
         'FerramentasToolStripMenuItem
         '
-        Me.FerramentasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PersonalizarToolStripMenuItem, Me.OpçõesToolStripMenuItem})
+        Me.FerramentasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpçõesToolStripMenuItem})
         Me.FerramentasToolStripMenuItem.Name = "FerramentasToolStripMenuItem"
-        Me.FerramentasToolStripMenuItem.Size = New System.Drawing.Size(75, 24)
+        Me.FerramentasToolStripMenuItem.Size = New System.Drawing.Size(75, 26)
         Me.FerramentasToolStripMenuItem.Text = "&Options"
-        '
-        'PersonalizarToolStripMenuItem
-        '
-        Me.PersonalizarToolStripMenuItem.Name = "PersonalizarToolStripMenuItem"
-        Me.PersonalizarToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
-        Me.PersonalizarToolStripMenuItem.Text = "&Personalizar"
         '
         'OpçõesToolStripMenuItem
         '
         Me.OpçõesToolStripMenuItem.Name = "OpçõesToolStripMenuItem"
-        Me.OpçõesToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
-        Me.OpçõesToolStripMenuItem.Text = "&Opções"
+        Me.OpçõesToolStripMenuItem.Size = New System.Drawing.Size(144, 26)
+        Me.OpçõesToolStripMenuItem.Text = "&Options"
+        '
+        'BookmarksToolStripMenuItem
+        '
+        Me.BookmarksToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddToolStripMenuItem, Me.BookmarksToolStripMenuItem1})
+        Me.BookmarksToolStripMenuItem.Name = "BookmarksToolStripMenuItem"
+        Me.BookmarksToolStripMenuItem.Size = New System.Drawing.Size(96, 24)
+        Me.BookmarksToolStripMenuItem.Text = "Bookmarks"
+        '
+        'HistoryToolStripMenuItem
+        '
+        Me.HistoryToolStripMenuItem.Name = "HistoryToolStripMenuItem"
+        Me.HistoryToolStripMenuItem.Size = New System.Drawing.Size(70, 26)
+        Me.HistoryToolStripMenuItem.Text = "&History"
         '
         'AjudaToolStripMenuItem
         '
         Me.AjudaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ConteúdoToolStripMenuItem, Me.ÍndiceToolStripMenuItem, Me.PesquisarToolStripMenuItem, Me.toolStripSeparator5, Me.SobreToolStripMenuItem})
         Me.AjudaToolStripMenuItem.Name = "AjudaToolStripMenuItem"
-        Me.AjudaToolStripMenuItem.Size = New System.Drawing.Size(55, 24)
+        Me.AjudaToolStripMenuItem.Size = New System.Drawing.Size(55, 26)
         Me.AjudaToolStripMenuItem.Text = "&Help"
         '
         'ConteúdoToolStripMenuItem
         '
         Me.ConteúdoToolStripMenuItem.Name = "ConteúdoToolStripMenuItem"
-        Me.ConteúdoToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.ConteúdoToolStripMenuItem.Size = New System.Drawing.Size(157, 26)
         Me.ConteúdoToolStripMenuItem.Text = "&Conteúdo"
         '
         'ÍndiceToolStripMenuItem
         '
         Me.ÍndiceToolStripMenuItem.Name = "ÍndiceToolStripMenuItem"
-        Me.ÍndiceToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.ÍndiceToolStripMenuItem.Size = New System.Drawing.Size(157, 26)
         Me.ÍndiceToolStripMenuItem.Text = "Í&ndice"
         '
         'PesquisarToolStripMenuItem
         '
         Me.PesquisarToolStripMenuItem.Name = "PesquisarToolStripMenuItem"
-        Me.PesquisarToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.PesquisarToolStripMenuItem.Size = New System.Drawing.Size(157, 26)
         Me.PesquisarToolStripMenuItem.Text = "&Pesquisar"
         '
         'toolStripSeparator5
         '
         Me.toolStripSeparator5.Name = "toolStripSeparator5"
-        Me.toolStripSeparator5.Size = New System.Drawing.Size(221, 6)
+        Me.toolStripSeparator5.Size = New System.Drawing.Size(154, 6)
         '
         'SobreToolStripMenuItem
         '
         Me.SobreToolStripMenuItem.Name = "SobreToolStripMenuItem"
-        Me.SobreToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.SobreToolStripMenuItem.Size = New System.Drawing.Size(157, 26)
         Me.SobreToolStripMenuItem.Text = "&Sobre..."
-        '
-        'DownloadToolStripMenuItem
-        '
-        Me.DownloadToolStripMenuItem.Name = "DownloadToolStripMenuItem"
-        Me.DownloadToolStripMenuItem.Size = New System.Drawing.Size(70, 24)
-        Me.DownloadToolStripMenuItem.Text = "&History"
-        '
-        'BookmarksToolStripMenuItem
-        '
-        Me.BookmarksToolStripMenuItem.Name = "BookmarksToolStripMenuItem"
-        Me.BookmarksToolStripMenuItem.Size = New System.Drawing.Size(96, 24)
-        Me.BookmarksToolStripMenuItem.Text = "Bookmarks"
         '
         'txtUrlSearchEngine
         '
         Me.txtUrlSearchEngine.BackColor = System.Drawing.SystemColors.ActiveBorder
         Me.txtUrlSearchEngine.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.txtUrlSearchEngine.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BackBtn, Me.ForwardBtn, Me.ReloadBtn, Me.txtUrl, Me.HomeBtn, Me.cmbSearchEngines, Me.txtUrlSearchEngines, Me.DownloadBtn})
+        Me.txtUrlSearchEngine.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BackBtn, Me.ForwardBtn, Me.ReloadBtn, Me.txtUrl, Me.HomeBtn, Me.cmbSearchEngines, Me.txtUrlSearchEngines, Me.DownloadBtn, Me.lbl})
         Me.txtUrlSearchEngine.Location = New System.Drawing.Point(0, 28)
         Me.txtUrlSearchEngine.Name = "txtUrlSearchEngine"
-        Me.txtUrlSearchEngine.Size = New System.Drawing.Size(1261, 28)
+        Me.txtUrlSearchEngine.Size = New System.Drawing.Size(835, 28)
         Me.txtUrlSearchEngine.TabIndex = 1
         Me.txtUrlSearchEngine.Text = "ToolStrip1"
         '
@@ -305,6 +306,8 @@ Partial Class Form1
         '
         'txtUrl
         '
+        Me.txtUrl.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.txtUrl.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
         Me.txtUrl.AutoSize = False
         Me.txtUrl.Name = "txtUrl"
         Me.txtUrl.Size = New System.Drawing.Size(350, 28)
@@ -345,36 +348,21 @@ Partial Class Form1
         Me.DownloadBtn.Size = New System.Drawing.Size(50, 25)
         Me.DownloadBtn.Text = "Download"
         '
+        'lbl
+        '
+        Me.lbl.Name = "lbl"
+        Me.lbl.Size = New System.Drawing.Size(17, 20)
+        Me.lbl.Text = "0"
+        '
         'TabControl1
         '
-        Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TabControl1.ImageList = Me.ImageList1
         Me.TabControl1.Location = New System.Drawing.Point(0, 56)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(1261, 987)
+        Me.TabControl1.Size = New System.Drawing.Size(835, 778)
         Me.TabControl1.TabIndex = 2
-        '
-        'TabPage1
-        '
-        Me.TabPage1.Controls.Add(Me.WebBrowser1)
-        Me.TabPage1.Location = New System.Drawing.Point(4, 25)
-        Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(1253, 958)
-        Me.TabPage1.TabIndex = 0
-        Me.TabPage1.Text = "TabPage1"
-        Me.TabPage1.UseVisualStyleBackColor = True
-        '
-        'WebBrowser1
-        '
-        Me.WebBrowser1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.WebBrowser1.Location = New System.Drawing.Point(3, 3)
-        Me.WebBrowser1.MinimumSize = New System.Drawing.Size(20, 20)
-        Me.WebBrowser1.Name = "WebBrowser1"
-        Me.WebBrowser1.Size = New System.Drawing.Size(1247, 952)
-        Me.WebBrowser1.TabIndex = 0
         '
         'ImageList1
         '
@@ -382,11 +370,28 @@ Partial Class Form1
         Me.ImageList1.ImageSize = New System.Drawing.Size(16, 16)
         Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
         '
+        'Timer1
+        '
+        Me.Timer1.Enabled = True
+        Me.Timer1.Interval = 1
+        '
+        'AddToolStripMenuItem
+        '
+        Me.AddToolStripMenuItem.Name = "AddToolStripMenuItem"
+        Me.AddToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.AddToolStripMenuItem.Text = "Add "
+        '
+        'BookmarksToolStripMenuItem1
+        '
+        Me.BookmarksToolStripMenuItem1.Name = "BookmarksToolStripMenuItem1"
+        Me.BookmarksToolStripMenuItem1.Size = New System.Drawing.Size(224, 26)
+        Me.BookmarksToolStripMenuItem1.Text = "Bookmarks"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1261, 1043)
+        Me.ClientSize = New System.Drawing.Size(835, 834)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.txtUrlSearchEngine)
         Me.Controls.Add(Me.MenuStrip1)
@@ -397,8 +402,6 @@ Partial Class Form1
         Me.MenuStrip1.PerformLayout()
         Me.txtUrlSearchEngine.ResumeLayout(False)
         Me.txtUrlSearchEngine.PerformLayout()
-        Me.TabControl1.ResumeLayout(False)
-        Me.TabPage1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -420,7 +423,6 @@ Partial Class Form1
     Friend WithEvents toolStripSeparator4 As ToolStripSeparator
     Friend WithEvents SelecionarTudoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents FerramentasToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents PersonalizarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents OpçõesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AjudaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ConteúdoToolStripMenuItem As ToolStripMenuItem
@@ -439,9 +441,12 @@ Partial Class Form1
     Friend WithEvents cmbSearchEngines As ToolStripComboBox
     Friend WithEvents DownloadBtn As ToolStripButton
     Friend WithEvents TabControl1 As TabControl
-    Friend WithEvents TabPage1 As TabPage
-    Friend WithEvents WebBrowser1 As WebBrowser
     Friend WithEvents ImageList1 As ImageList
-    Friend WithEvents DownloadToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents HistoryToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents BookmarksToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents lbl As ToolStripLabel
+    Friend WithEvents Timer1 As Timer
+    Friend WithEvents CloseTabToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AddToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents BookmarksToolStripMenuItem1 As ToolStripMenuItem
 End Class

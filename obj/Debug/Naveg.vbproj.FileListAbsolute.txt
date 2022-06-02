@@ -11,3 +11,5 @@ C:\Users\ygora\source\repos\Naveg\Naveg\obj\Debug\Naveg.exe
 C:\Users\ygora\source\repos\Naveg\Naveg\obj\Debug\Naveg.xml
 C:\Users\ygora\source\repos\Naveg\Naveg\obj\Debug\Naveg.pdb
 C:\Users\ygora\source\repos\Naveg\Naveg\obj\Debug\Naveg.Opcoes.resources
+C:\Users\ygora\source\repos\Naveg\Naveg\obj\Debug\Naveg.History.resources
+C:\Users\ygora\source\repos\Naveg\Naveg\obj\Debug\Naveg.bookmarks.resources
